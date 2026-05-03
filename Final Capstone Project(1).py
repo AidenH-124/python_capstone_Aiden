@@ -1,15 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[11]:
-
 
 # Import Libraries
 import random
 import time
-
-
-# In[12]:
 
 
 # Character class: This class is for both the player and the enemy
@@ -59,18 +51,12 @@ class Enemy(Character):
         """
 
 
-# In[13]:
-
-
 # This increases enemy dificulty based on the current level
 def scale_enemy(enemy, level):
     enemy.hp += level * 5
     enemy.max_hp += level * 5
     enemy.attack += level * 2
     return enemy
-
-
-# In[14]:
 
 
 # Game Functions
@@ -130,9 +116,6 @@ def get_enemies_for_level(level):
 def save_results(player):
     with open("game_results.txt", "a") as file:
         file.write(f"{player.name} ({player.char_class}) - Wins: ({player.wins}\n")
-
-
-# In[15]:
 
 
 # Main Game Loop
@@ -210,10 +193,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-# In[ ]:
-
-
-
-
